@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #e6ccff, #ff66cc);
+      color: #4a2c2c;
+      text-align: center;
+      padding: 50px;
+      overflow-y: scroll;
+      animation: fadeIn 2s ease-in;
+    }
+    h1 {
+      color: #b30086;
+      font-size: 40px;
+      text-shadow: 0 0 15px rgba(255, 102, 204, 0.6);
+      animation: pulse 3s infinite;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 20px auto;
+      max-width: 750px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 102, 204, 0.3);
+      animation: slideUp 1.5s ease-out;
+    }
+    img {
+      margin: 20px auto;
+      display: block;
+      max-width: 320px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 102, 204, 0.5);
+      transition: transform 0.5s ease;
+    }
+    img:hover { transform: scale(1.08); }
+    .error-box {
+      background: linear-gradient(to right, #f3c6e6, #e0a3d3, #ff66cc);
+      color: #5a003f;
+      border: 2px solid #ff66cc;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(255, 102, 204, 0.4);
+      animation: bounceIn 1.5s ease;
+    }
+    .buttons { margin-top: 20px; }
+    button {
+      background: linear-gradient(to right, #ff80ab, #d966ff, #ff66cc);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: all 0.35s ease;
+      box-shadow: 0 4px 12px rgba(255, 102, 204, 0.4);
+      transform-origin: center center;
+    }
+    button:hover {
+      background: linear-gradient(to right, #f06292, #b84dff, #ff3399);
+      transform: scale(1.08);
+    }
+    #message { display: none; }
+    #forgiveBox { display: none; margin-top: 30px; }
+    footer {
+      margin-top: 40px;
+      font-style: italic;
+      color: #6d4c41;
+      font-size: 18px;
+      animation: fadeIn 3s ease-in;
+    }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    @keyframes pulse {
+      0% { text-shadow: 0 0 10px rgba(255, 102, 204, 0.4); }
+      50% { text-shadow: 0 0 20px rgba(255, 102, 204, 0.8); }
+      100% { text-shadow: 0 0 10px rgba(255, 102, 204, 0.4); }
+    }
+  </style>
+</head>
+<body>
+  <h1>System Alert</h1>
+  
+  <!-- Error Message -->
+  <div class="error-box" id="errorBox">
+    I’m sorry for making you feel uncomfortable. 
+    Would you like to read the full apology?
+    <div class="buttons">
+      <button id="yesBtn" onclick="showMessage()">Read Apology</button>
+      <button id="noBtn" onclick="shrinkNo()">Not Now</button>
+    </div>
+    <img src="https://media.tenor.com/_ELwf7lNhg0AAAAi/cute.gif" alt="Sorry GIF">
+  </div>
+  
+  <!-- Hidden Apology Message -->
+  <div id="message">  
+    <p>
+      Babe 🥺, I really need to say this from the bottom of my heart.  
+      I’m so sorry 😔 for crossing a line and asking something na hindi tama.  
+      I realize now na it made you feel uncomfortable, and that’s the last thing  
+      I ever wanted to do 💔. Alam kong nasaktan ka, and I regret it deeply.  
+    </p>
+    <img src="https://media.tenor.com/rO1D1Ljvc94AAAAi/please-asking.gif" alt="Romantic Hug GIF">
+
+    <p>
+      Mahal na mahal kita 💖, and I should’ve shown you more respect.  
+      Hindi ko dapat hiniling yung bagay na naglagay ng pressure sa’yo.  
+      Love is supposed to be about trust, patience, and respect 🌸,  
+      not about making you feel uneasy.  
+    </p>
+    <img src="https://media.tenor.com/Qu6GUg0Yx90AAAAi/mocha-cry.gif" alt="Sorry Love GIF">
+
+    <p>
+      I promise, babe 🙏, na from now on I’ll be more careful with my words  
+      and my actions. I’ll listen better, I’ll respect your boundaries,  
+      and I’ll make sure na you always feel safe and valued with me 💕.  
+      Kasi ikaw talaga yung home ko, my safe place, my forever 🌹.  
+    </p>
+    <img src="https://media.tenor.com/k3vWOPsbToUAAAAi/sorry.gif" alt="Love Hearts GIF">
+
+    <p>
+      Please forgive me 🥺. Hindi ko kailangan ng anything more,  
+      kasi ikaw mismo, your love, your presence—sobrang enough na 💞.  
+      You’re my heart, my happiness, and my forever.  
+      I’ll prove to you everyday na my love is patient, kind,  
+      and super real 💖.  
+    </p>
+    <img src="https://media.tenor.com/VQSu0SY9c_kAAAAi/distoboy-illustration.gif" alt="Love Apology GIF">
+
+    <p>
+      Babe, I’m sorry ulit 😔. I love you sobra 🥺💖,  
+      and I’ll spend every day showing you na you are my priority,  
+      my partner, and my greatest blessing.  
+    </p>
+    <img src="https://media.tenor.com/hT0lvdDZOmkAAAAi/please-please-please.gif" alt="Please Forgive Me GIF">
+  
+    
+    <!-- Forgive Me Box -->
+    <div id="forgiveBox" class="error-box">
+      💖 Do you forgive me?  
+      <div class="buttons">
+        <button onclick="alert('Thank you, my love ❤️')">Yes</button>
+        <button onclick="alert('I’ll keep trying until you do 💔')">No</button>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Forever yours, Your Renren</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Controls for scaling and vanishing behavior
+    let yesScale = 1;    // current scale for Yes button
+    let noScale = 1;     // current scale for No button
+    const NO_SHRINK_STEP = 0.18;  // how much No shrinks per click
+    const YES_GROW_STEP = 0.22;   // how much Yes grows per No click
+    const MIN_NO_SCALE = 0.12;    // threshold to consider No vanished
+
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+      document.getElementById("errorBox").style.display = "none";
+      document.getElementById("forgiveBox").style.display = "block";
+    }
+
+    // Called when No is clicked: No shrinks progressively and eventually fades out,
+    // while Yes grows progressively on each No click.
+    function shrinkNo() {
+      const noBtn = document.getElementById("noBtn");
+      const yesBtn = document.getElementById("yesBtn");
+
+      if (!noBtn || !yesBtn) return;
+
+      // Shrink No
+      noScale = Math.max(0, noScale - NO_SHRINK_STEP);
+      noBtn.style.transition = "transform 0.35s ease, opacity 0.45s ease";
+      noBtn.style.transform = `scale(${noScale})`;
+
+      // Fade out and remove when below threshold
+      if (noScale <= MIN_NO_SCALE) {
+        noBtn.style.opacity = "0";
+        // wait for transition to finish then hide
+        setTimeout(() => {
+          if (noBtn.parentNode) noBtn.style.display = "none";
+        }, 450);
+      } else {
+        // ensure visible while shrinking
+        noBtn.style.opacity = "1";
+      }
+
+      // Grow Yes
+      yesScale = yesScale + YES_GROW_STEP;
+      yesBtn.style.transition = "transform 0.35s ease";
+      yesBtn.style.transform = `scale(${yesScale})`;
+    }
+  </script>
+</body>
+</html>
